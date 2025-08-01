@@ -3,7 +3,7 @@
   <LocalizedText>
     <Row Tag="LOC_MEGA_AUTOPINS_HOTKEY_CATEGORY" Language="pl_PL"><Text>Mega Calculator</Text></Row>
     <Row Tag="LOC_MEGA_AUTOPINS_TOGGLE" Language="pl_PL"><Text>Przełącz Auto pinezki (Shift+G)</Text></Row>
-    <Row Tag="LOC_MEGA_AUTOPINS_READY" Language="pl_PL"><Text>Mega Auto Pins v.1.25 załadowany. Wciśnij Shift+G.</Text></Row>
+    <Row Tag="LOC_MEGA_AUTOPINS_READY" Language="pl_PL"><Text>Mega Auto Pins v.1.27 załadowany. Wciśnij Shift+G.</Text></Row>
     <Row Tag="LOC_MEGA_AUTOPINS_ON" Language="pl_PL"><Text>Auto pinezki: WŁ. (tworzenie pinezek)</Text></Row>
     <Row Tag="LOC_MEGA_AUTOPINS_OFF" Language="pl_PL"><Text>Auto pinezki: WYŁ. (wyczyszczono)</Text></Row>
   </LocalizedText>

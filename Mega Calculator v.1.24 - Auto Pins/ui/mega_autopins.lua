@@ -1,12 +1,12 @@
 --  ===========================================================
---  Mega Auto Pins  v1.25        (2025-08-01)
---    * blocks districts on bonus / luxury resources
+--  Mega Auto Pins  v1.27        (2025-08-01)
+--    * blocks districts on bonus / luxury / strategic resources
 --    * global 4-tile distance check (includes CS & AI cities)
 --    * verbose aqueduct rejection logging
 --    * yield-aware city-site scoring  (hooks DMT if present)
 --  ===========================================================
 
-print("mega_autopins: v1.25 loading")
+print("mega_autopins: v1.27 loading")
 
 -- Optional link-up with Detailed Map Tacks yield engine.
 pcall(function() include("dmt_yieldcalculator") end)
@@ -61,7 +61,7 @@ end
 
 local function AdjacentPlots(x, y) return Map.GetAdjacentPlots(x, y) or {} end
 
--- Resource-aware check: rejects bonus & luxury tiles
+-- Resource-aware check: rejects bonus, luxury, and strategic tiles
 local function canHostDistrictBasic(p)
   if not p then return false end
   if p:IsWater() or p:IsMountain() or p:IsImpassable() then return false end
@@ -69,7 +69,9 @@ local function canHostDistrictBasic(p)
   local r = p:GetResourceType()
   if r and r ~= -1 then
     local class = GameInfo.Resources[r].ResourceClassType
-    if class == "RESOURCECLASS_BONUS" or class == "RESOURCECLASS_LUXURY" then
+    if class == "RESOURCECLASS_BONUS"
+       or class == "RESOURCECLASS_LUXURY"
+       or class == "RESOURCECLASS_STRATEGIC" then
       return false
     end
   end
@@ -117,6 +119,58 @@ local function plotYieldScore(p)
        +       (feats.Faith or 0)
   end
   return 0
+end
+
+local function getResourceYield(p)
+  local r = p:GetResourceType()
+  if not r or r == -1 then return 0 end
+  local resInfo = GameInfo.Resources[r]
+  if not resInfo then return 0 end
+  -- Example: food + production + gold (very rough, can be improved)
+  local y = (resInfo.Food or 0) + (resInfo.Production or 0) + (resInfo.Gold or 0)
+  return y
+end
+
+-- Helper: Check if plot is near an Industrial Zone (IZ)
+local function isNearIndustry(plot)
+  for dx = -3, 3 do
+    for dy = -3, 3 do
+      local q = Map.GetPlotXYWithRangeCheck(plot:GetX(), plot:GetY(), dx, dy, 3)
+      if q and q:GetDistrictType() ~= -1 then
+        local d = q:GetDistrictType()
+        if d ~= -1 and GameInfo.Districts[d].DistrictType == "DISTRICT_INDUSTRIAL_ZONE" then
+          return true
+        end
+      end
+    end
+  end
+  return false
+end
+
+-- Enhanced canHostDistrict: allow resource removal if beneficial
+local function canHostDistrictWithResourceAnalysis(p, scoreFunc)
+  if not p then return false, nil end
+  if p:IsWater() or p:IsMountain() or p:IsImpassable() then return false, nil end
+  if p:GetDistrictType() ~= -1 or p:GetWonderType() ~= -1 then return false, nil end
+  local r = p:GetResourceType()
+  if r and r ~= -1 then
+    local class = GameInfo.Resources[r].ResourceClassType
+    if class == "RESOURCECLASS_BONUS"
+       or class == "RESOURCECLASS_LUXURY"
+       or class == "RESOURCECLASS_STRATEGIC" then
+      -- Compare yields: if district is better, allow and recommend removal
+      local districtScore = scoreFunc(p)
+      local resourceYield = getResourceYield(p)
+      if districtScore > resourceYield then
+        dbg(("Resource removal recommended at (%d,%d): district yield %d > resource yield %d")
+          :format(p:GetX(), p:GetY(), districtScore, resourceYield))
+        return true, true -- true = can place, true = recommend removal
+      else
+        return false, nil
+      end
+    end
+  end
+  return true, nil
 end
 
 -- ===========================================================
@@ -380,6 +434,13 @@ local function scoreCitySite(plot)
   -- yield proxy bonus
   local yld = plotYieldScore(plot)
   s = s + yld
+
+  -- Industry adjacency bonus
+  if isNearIndustry(plot) then
+    s = s + 8 -- long-term bonus for being near an IZ
+    dbg(("CitySite (%d,%d) gets Industry adjacency bonus"):format(plot:GetX(), plot:GetY()))
+  end
+
   dbg(("CitySite (%d,%d) score=%d (+yield %.1f)"):format(plot:GetX(), plot:GetY(), s, yld))
 
   return s
@@ -434,7 +495,11 @@ function ensurePinAt(x, y, icon, name)
   local ex = c.GetMapPin and c:GetMapPin(x, y)
   if ex and ex.SetIconName then
     setIconSafe(ex, icon)
-    if ex.SetName then ex:SetName(name or PIN_PREFIX) end
+    if ex.SetName then
+      ex:SetName(name or PIN_PREFIX)
+    else
+      dbg("Warning: Pin at ("..x..","..y..") could not set name!")
+    end
     if c.UpdateMapPin then c:UpdateMapPin(ex) end
     if LuaEvents and LuaEvents.DMT_MapPinAdded then LuaEvents.DMT_MapPinAdded(ex) end
     dbg("UpdatePin: "..(name or PIN_PREFIX).." @("..x..","..y..")")
@@ -450,7 +515,11 @@ function ensurePinAt(x, y, icon, name)
   if not pin then dbg("Failed to create pin at ("..x..","..y..")"); return false end
 
   setIconSafe(pin, icon)
-  if pin.SetName then pin:SetName(name or PIN_PREFIX) end
+  if pin.SetName then
+    pin:SetName(name or PIN_PREFIX)
+  else
+    dbg("Warning: Pin at ("..x..","..y..") could not set name!")
+  end
   if c.UpdateMapPin then c:UpdateMapPin(pin) end
   if Network and Network.BroadcastPlayerInfo then Network.BroadcastPlayerInfo() end
   if LuaEvents and LuaEvents.DMT_MapPinAdded then
@@ -486,20 +555,43 @@ end
 -- ===========================================================
 --  Placement helpers & city-specific logic
 -- ===========================================================
+-- Helper: Check if plot is already used or has a district
+
+local function isPlotBlocked(p, used)
+  if not p then return true end
+  if used and used[p:GetIndex()] then return true end
+  if p:GetDistrictType() ~= -1 then return true end
+  return false
+end
+
 local function bestPlotAround(city, radius, scoreFunc, minWanted, used)
   local cx, cy = city:GetX(), city:GetY()
-  local bestP, best = nil, -999
+  local bestP, best, recommendRemoval = nil, -999, false
+  if type(scoreFunc) ~= "function" then
+    dbg("ERROR: bestPlotAround called with nil or non-function scoreFunc!")
+    return nil, -999, false
+  end
   for dx = -radius, radius do
     for dy = -radius, radius do
       local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, radius)
-      if p and visible(p) and (not used[p:GetIndex()])
-         and canHostDistrictBasic(p) and within3OfCity(city, p) then
-        local sc = scoreFunc(p)
-        if sc >= minWanted and sc > best then best, bestP = sc, p end
+      if p and visible(p) and not isPlotBlocked(p, used)
+         and within3OfCity(city, p) then
+        local canPlace, removal = canHostDistrictWithResourceAnalysis(p, scoreFunc)
+        if canPlace then
+          local sc = scoreFunc(p)
+          -- Add symbiosis bonus: +1 for each adjacent district (not itself)
+          local adjDistricts = countAdj(p:GetX(), p:GetY(), function(q)
+            return q:GetDistrictType() ~= -1
+          end)
+          sc = sc + adjDistricts
+          if sc >= minWanted and sc > best then
+            best, bestP, recommendRemoval = sc, p, removal
+          end
+        end
       end
     end
   end
-  return bestP, best
+  return bestP, best, recommendRemoval
 end
 
 -- ---------- Campus ↔ Hub synergy ----------
@@ -564,21 +656,27 @@ end
 local function placeForCity(city, used)
   placeCampusHubSynergy(city, used)
 
-  local tP, ts = bestPlotAround(city, 3, scoreTheater, 0, used)
+  local tP, ts, tRemove = bestPlotAround(city, 3, scoreTheater, 0, used)
   if tP then used[tP:GetIndex()] = true
-    ensurePinAt(tP:GetX(), tP:GetY(), ICONS.THEATER, PIN_PREFIX.." Theater "..ts)
+    local name = PIN_PREFIX.." Theater "..ts
+    if tRemove then name = name.." (remove resource)" end
+    ensurePinAt(tP:GetX(), tP:GetY(), ICONS.THEATER, name)
     dbg("Placed Theater @"..tP:GetX()..","..tP:GetY().." sc="..ts)
   end
 
-  local izP, izs = bestPlotAround(city, 3, scoreIZ, 0, used)
+  local izP, izs, izRemove = bestPlotAround(city, 3, scoreIZ, 0, used)
   if izP then used[izP:GetIndex()] = true
-    ensurePinAt(izP:GetX(), izP:GetY(), ICONS.IZ, PIN_PREFIX.." IZ "..izs)
+    local name = PIN_PREFIX.." IZ "..izs
+    if izRemove then name = name.." (remove resource)" end
+    ensurePinAt(izP:GetX(), izP:GetY(), ICONS.IZ, name)
     dbg("Placed IZ @"..izP:GetX()..","..izP:GetY().." sc="..izs)
   end
 
-  local ecP, ecs = bestPlotAround(city, 3, scoreEC, 1, used)
+  local ecP, ecs, ecRemove = bestPlotAround(city, 3, scoreEC, 1, used)
   if ecP then used[ecP:GetIndex()] = true
-    ensurePinAt(ecP:GetX(), ecP:GetY(), ICONS.EC, PIN_PREFIX.." EC "..ecs)
+    local name = PIN_PREFIX.." EC "..ecs
+    if ecRemove then name = name.." (remove resource)" end
+    ensurePinAt(ecP:GetX(), ecP:GetY(), ICONS.EC, name)
     dbg("Placed EC @"..ecP:GetX()..","..ecP:GetY().." sc="..ecs)
   end
 
@@ -700,23 +798,34 @@ end
 -- ===========================================================
 --  Input & init
 -- ===========================================================
+
+-- Improved input/event registration and diagnostics
 local function OnInputActionTriggered(id)
+  dbg("Event: InputActionTriggered id="..tostring(id).." ACTION_ID="..tostring(ACTION_ID))
   if id == ACTION_ID then
-    dbg("InputActionTriggered"); Toggle()
+    dbg("InputActionTriggered: Hotkey matched, toggling pins."); Toggle()
   end
 end
 
 local function OnInputHandler(pInput)
-  if pInput:GetMessageType() == KeyEvents.KeyUp
-     and pInput:GetKey() == Keys.G
-     and pInput:IsShiftDown() then
-    dbg("Raw Shift+G captured"); Toggle(); return true
+  dbg("Event: OnInputHandler called")
+  if pInput:GetMessageType() == KeyEvents.KeyUp then
+    dbg("KeyUp event detected")
+    if pInput:GetKey() == Keys.G then
+      dbg("Key G detected")
+      if pInput:IsShiftDown() then
+        dbg("Shift+G detected, toggling pins.")
+        Toggle(); return true
+      end
+    end
   end
   return false
 end
 
 local function Initialize()
+  dbg("Initialize called")
   localPlayer = Game.GetLocalPlayer() or -1
+  dbg("localPlayer="..tostring(localPlayer))
   isInca    = isPlayerInca(localPlayer)
   isBrazil  = isPlayerCiv(localPlayer, "CIVILIZATION_BRAZIL")
   isJapan   = isPlayerCiv(localPlayer, "CIVILIZATION_JAPAN")
@@ -725,15 +834,27 @@ local function Initialize()
   isKorea   = isPlayerCiv(localPlayer, "CIVILIZATION_KOREA")
 
   if ContextPtr and ContextPtr.SetInputHandler then
-    ContextPtr:SetInputHandler(OnInputHandler, true) end
+    dbg("Registering input handler via ContextPtr")
+    ContextPtr:SetInputHandler(OnInputHandler, true)
+  else
+    dbg("ContextPtr or SetInputHandler missing!")
+  end
   if Events and Events.InputActionTriggered then
-    Events.InputActionTriggered.Add(OnInputActionTriggered) end
+    dbg("Registering InputActionTriggered event")
+    Events.InputActionTriggered.Add(OnInputActionTriggered)
+  else
+    dbg("Events or InputActionTriggered missing!")
+  end
   if UI and UI.StatusMessage and Locale and Locale.Lookup then
-    UI.StatusMessage(Locale.Lookup("LOC_MEGA_AUTOPINS_READY")) end
+    dbg("Showing status message: LOC_MEGA_AUTOPINS_READY")
+    UI.StatusMessage(Locale.Lookup("LOC_MEGA_AUTOPINS_READY"))
+  else
+    dbg("UI/StatusMessage/Locale missing!")
+  end
 
   dbg(("Initialized; player=%d Inca=%s"):format(localPlayer, tostring(isInca)))
 end
 
 Events.LoadGameViewStateDone.Add(Initialize)
 
-print("mega_autopins: v1.25 ready")
+print("mega_autopins: v1.27 ready")

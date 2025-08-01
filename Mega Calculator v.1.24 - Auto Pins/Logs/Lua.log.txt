@@ -1,0 +1,1584 @@
+DebugHotloadCache: GameDebug initialized!
+Test: Test.LUA loaded!
+JoiningRoom: OnFinishedGameplayContentConfigure() g_waitingForContentConfigure=true
+MainMenu: MainMenu::OnResumeGame() leaving the network session.
+LoadScreen: true
+LoadScreen: false
+LoadScreen: true
+WorldCongress: Initializing World Congress Lua
+MapLabelManager: INDIAN OCEAN (0, 0)
+MapLabelManager: IAPETUS OCEAN (0, 0)
+MapLabelManager: ANTARCTIC OCEAN (0, 0)
+MapPinManager: DMT_MapPinManager Loading mappinmanager.lua as base file
+MapSearchPanel: Created SearchContext 'MapSearch_Primary'
+MapSearchPanel: Created SearchContext 'MapSearch_Suggestions'
+TradeOverview: Initializing BTS Trade Overview
+TradeOverview: Initializing BTS Trade Support Tracker
+ReportsList: Loading ReportsListLoader.lua from ReportsList Loader 1.1
+ReportsList: OK loaded ReportsListLoader.lua from ReportsList Loader
+ReportScreen: Loading ReportScreen.lua from Better Report Screen version 6.1
+ReportScreen: Rise & Fall    :	YES
+ReportScreen: Gathering Storm:	YES
+ReportScreen: Monopolies     :	no
+ReportScreen: OK loaded ReportScreen.lua from Better Report Screen
+TradeRouteChooser: Initializing BTS Trade Route Chooser
+TradeRouteChooser: Initializing BTS Trade Support Automater
+TradeRouteChooser: No running route data was found, on load.
+TradeOriginChooser: Initializing BTS Trade Origin Chooser
+MapPinPopup: initializing MapTacks.IconOptions(0)
+MapPinPopup: Selected 14 columns
+MapPinPopup: DMT_MapPinPopup Loading mappinpopup.lua as base file
+DiplomacyActionView: QD_DiplomacyActionView loading DiplomacyActionView_Expansion2.lua as base file
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/1699006932/RealEraTracker
+RealEraTracker: Loading RealEraTracker.lua from Real Era Tracker version 1.0
+RealEraTracker: OK loaded RealEraTracker.lua from Real Era Tracker
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/Mega Calculator v.1.25 - Auto Pins/ui/mega_autopins
+mega_autopins: mega_autopins: v1.27 loading
+mega_autopins: Loading DMT_YieldCalculator.lua
+mega_autopins: Loading DMT_ModifierCalculator.lua
+mega_autopins: Loading DMT_ModifierRequirementChecker.lua
+mega_autopins: mega_autopins: v1.27 ready
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/2428969051_Detailed_Map_Tacks/2428969051 Detailed Map Tacks/ui/dmt_yieldcalculator
+dmt_yieldcalculator: Loading DMT_YieldCalculator.lua
+dmt_yieldcalculator: Loading DMT_ModifierCalculator.lua
+dmt_yieldcalculator: Loading DMT_ModifierRequirementChecker.lua
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/2460661464/ui/qd_dealpopup
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/2460661464/ui/qd_launchbutton
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/2460661464/ui/qd_offerautomator
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/2460661464/ui/qd_popuptab_purchase
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/2460661464/ui/qd_popuptab_sale
+InGame: Loading InGame UI - C:/Users/Windows 10/OneDrive/Documents/My Games/Sid Meier's Civilization VI (Epic)/Mods/1312585482/1312585482/RealModifierAnalysis
+RealModifierAnalysis: Loading Real Modifier Analysis.lua from Better Report Screen version 6.1
+RealModifierAnalysis: OK loaded Real Modifier Analysis.lua from Better Report Screen
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/DedicationPopup
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/DisloyalCityChooser
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/EraProgressPanel
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/EraReviewPopup
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/ExpansionIntro
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/GovernorAssignmentChooser
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/GovernorPanel
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/HistoricMoments
+InGame: Loading InGame UI - ../../../DLC/Expansion2/UI/Additions/WorldCrisisPopup
+TutorialUIRoot: Tutorial: Firaxis in game tutorial prompts.
+TutorialUIRoot: Version: 1
+TutorialUIRoot: Loading bank of items for tutorial scenario: 'BASE'
+MapLabelManager: INDIAN OCEAN (1912.8648681641, -559.80645751953)
+MapLabelManager: INDIAN OCEAN (-1493.8846435547, 1044.3669433594)
+MapLabelManager: INDIAN OCEAN (-1476.5883789063, -1035.4447021484)
+MapLabelManager: INDIAN OCEAN (1533.5895996094, -1082.2259521484)
+MapLabelManager: INDIAN OCEAN (-2208.8083496094, 413.97445678711)
+MapLabelManager: INDIAN OCEAN (-2447.2182617188, -92.152870178223)
+MapLabelManager: INDIAN OCEAN (1863.2088623047, 1005.2935791016)
+MapLabelManager: INDIAN OCEAN (-1960.0871582031, 962.95428466797)
+MapLabelManager: INDIAN OCEAN (-1876.5540771484, -490.23101806641)
+MapLabelManager: INDIAN OCEAN (2292.5061035156, 923.81927490234)
+MapLabelManager: INDIAN OCEAN (-2318.8447265625, -1007.5287475586)
+MapLabelManager: IAPETUS OCEAN (-45.894027709961, 50.89331817627)
+MapLabelManager: IAPETUS OCEAN (-786.39666748047, 1013.6287841797)
+MapLabelManager: ANTARCTIC OCEAN (964.31243896484, 449.77038574219)
+MapLabelManager: ANTARCTIC OCEAN (-87.343589782715, 975.16510009766)
+MapLabelManager: ANTARCTIC OCEAN (345.68826293945, 489.10855102539)
+MapLabelManager: ANTARCTIC OCEAN (806.40765380859, -43.099494934082)
+MapLabelManager: ANTARCTIC OCEAN (705.146484375, 1001.8265991211)
+LoadScreen: OnLoadGameViewStateDone
+mega_autopins: mega_autopins: Initialize called
+mega_autopins: mega_autopins: localPlayer=0
+mega_autopins: mega_autopins: Registering input handler via ContextPtr
+mega_autopins: mega_autopins: Registering InputActionTriggered event
+mega_autopins: mega_autopins: UI/StatusMessage/Locale missing!
+mega_autopins: mega_autopins: Initialized; player=0 Inca=false
+TradeRouteChooser: No running route data was found, on load.
+MapLabelManager: IAPETUS OCEAN (-45.894027709961, 50.89331817627)
+MapLabelManager: IAPETUS OCEAN (-786.39666748047, 1013.6287841797)
+MapLabelManager: ANTARCTIC OCEAN (964.31243896484, 449.77038574219)
+MapLabelManager: ANTARCTIC OCEAN (-87.343589782715, 975.16510009766)
+MapLabelManager: ANTARCTIC OCEAN (345.68826293945, 489.10855102539)
+MapLabelManager: ANTARCTIC OCEAN (806.40765380859, -43.099494934082)
+MapLabelManager: ANTARCTIC OCEAN (705.146484375, 1001.8265991211)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (28,39) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (28,37) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Campus (29,35) score=0
+mega_autopins: mega_autopins: Campus (29,33) score=1
+mega_autopins: mega_autopins: Campus (30,35) score=0
+mega_autopins: mega_autopins: Campus (30,33) score=0
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (28,38) score=0
+mega_autopins: mega_autopins: Theater (28,39) score=0
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (28,37) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (29,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: Theater (29,35) score=1
+mega_autopins: mega_autopins: Theater (29,33) score=0
+mega_autopins: mega_autopins: Theater (30,34) score=0
+mega_autopins: mega_autopins: Theater (30,35) score=1
+mega_autopins: mega_autopins: Theater (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 (remove resource) @(29,36)
+mega_autopins: mega_autopins: Placed Theater @29,36 sc=2
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (28,38) score=0
+mega_autopins: mega_autopins: IZ (28,39) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (28,37) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: IZ (29,35) score=0
+mega_autopins: mega_autopins: IZ (29,33) score=0
+mega_autopins: mega_autopins: IZ (30,34) score=0
+mega_autopins: mega_autopins: IZ (30,35) score=0
+mega_autopins: mega_autopins: IZ (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(29,35)
+mega_autopins: mega_autopins: Placed IZ @29,35 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,38): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (30,34): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 2 @(30,35)
+mega_autopins: mega_autopins: Placed EC @30,35 sc=2
+mega_autopins: mega_autopins: Aqueduct reject (27,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (27,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,39) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (27,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (31,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (33,36) – on resource / invalid
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(29,37)
+mega_autopins: mega_autopins: Placed Harbor @29,37 sc=2
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 1 @(30,37)
+mega_autopins: mega_autopins: Placed Harbor @30,37 sc=1
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(31,36)
+mega_autopins: mega_autopins: Placed Harbor @31,36 sc=2
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,35) score=9 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (26,34) score=40 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,35) score=12 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,31) score=20 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,32) score=16 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,33) score=37 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,34) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: CitySite (26,31) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,32) score=14 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,33) score=29 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: CitySite (27,31) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (28,32) score=5 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [100] @(26,34)
+mega_autopins: mega_autopins: Placed NextCity @26,34 score=40
+mega_autopins: mega_autopins: Reject site (26,33) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,33) 73< threshold
+mega_autopins: mega_autopins: Reject site (26,31) 55< threshold
+mega_autopins: mega_autopins: Reject site (25,31) 50< threshold
+mega_autopins: mega_autopins: Reject site (26,32) 40< threshold
+mega_autopins: mega_autopins: Reject site (27,31) 38< threshold
+mega_autopins: mega_autopins: Reject site (27,32) 35< threshold
+mega_autopins: mega_autopins: Reject site (26,35) 30< threshold
+mega_autopins: mega_autopins: Reject site (25,35) 23< threshold
+mega_autopins: mega_autopins: Reject site (28,32) 13< threshold
+mega_autopins: mega_autopins: NextCity placed 1 (best=40)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 6 pins
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (28,39) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (28,37) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Campus (29,35) score=0
+mega_autopins: mega_autopins: Campus (29,33) score=1
+mega_autopins: mega_autopins: Campus (30,35) score=0
+mega_autopins: mega_autopins: Campus (30,33) score=0
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (28,38) score=0
+mega_autopins: mega_autopins: Theater (28,39) score=0
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (28,37) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (29,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: Theater (29,35) score=1
+mega_autopins: mega_autopins: Theater (29,33) score=0
+mega_autopins: mega_autopins: Theater (30,34) score=0
+mega_autopins: mega_autopins: Theater (30,35) score=1
+mega_autopins: mega_autopins: Theater (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 (remove resource) @(29,36)
+mega_autopins: mega_autopins: Placed Theater @29,36 sc=2
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (28,38) score=0
+mega_autopins: mega_autopins: IZ (28,39) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (28,37) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: IZ (29,35) score=0
+mega_autopins: mega_autopins: IZ (29,33) score=0
+mega_autopins: mega_autopins: IZ (30,34) score=0
+mega_autopins: mega_autopins: IZ (30,35) score=0
+mega_autopins: mega_autopins: IZ (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(29,35)
+mega_autopins: mega_autopins: Placed IZ @29,35 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,38): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (30,34): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 2 @(30,35)
+mega_autopins: mega_autopins: Placed EC @30,35 sc=2
+mega_autopins: mega_autopins: Aqueduct reject (27,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (27,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,39) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (27,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (31,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (33,36) – on resource / invalid
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(29,37)
+mega_autopins: mega_autopins: Placed Harbor @29,37 sc=2
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 1 @(30,37)
+mega_autopins: mega_autopins: Placed Harbor @30,37 sc=1
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(31,36)
+mega_autopins: mega_autopins: Placed Harbor @31,36 sc=2
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,35) score=9 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (26,34) score=40 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,35) score=12 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,31) score=23 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,32) score=19 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,33) score=37 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,34) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: CitySite (26,30) score=14 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,31) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,32) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,33) score=29 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (27,30) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,31) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (28,32) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [100] @(26,34)
+mega_autopins: mega_autopins: Placed NextCity @26,34 score=40
+mega_autopins: mega_autopins: Reject site (26,33) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,33) 73< threshold
+mega_autopins: mega_autopins: Reject site (25,31) 58< threshold
+mega_autopins: mega_autopins: Reject site (26,31) 55< threshold
+mega_autopins: mega_autopins: Reject site (26,32) 48< threshold
+mega_autopins: mega_autopins: Reject site (27,32) 43< threshold
+mega_autopins: mega_autopins: Reject site (27,31) 38< threshold
+mega_autopins: mega_autopins: Reject site (26,30) 35< threshold
+mega_autopins: mega_autopins: Reject site (26,35) 30< threshold
+mega_autopins: mega_autopins: Reject site (25,35) 23< threshold
+mega_autopins: mega_autopins: Reject site (27,30) 20< threshold
+mega_autopins: mega_autopins: Reject site (28,32) 20< threshold
+mega_autopins: mega_autopins: NextCity placed 1 (best=40)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (28,39) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (28,37) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Campus (29,35) score=0
+mega_autopins: mega_autopins: Campus (29,33) score=1
+mega_autopins: mega_autopins: Campus (30,35) score=0
+mega_autopins: mega_autopins: Campus (30,33) score=0
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (28,38) score=0
+mega_autopins: mega_autopins: Theater (28,39) score=0
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (28,37) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (29,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: Theater (29,35) score=1
+mega_autopins: mega_autopins: Theater (29,33) score=0
+mega_autopins: mega_autopins: Theater (30,34) score=0
+mega_autopins: mega_autopins: Theater (30,35) score=1
+mega_autopins: mega_autopins: Theater (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 (remove resource) @(29,36)
+mega_autopins: mega_autopins: Placed Theater @29,36 sc=2
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (28,38) score=0
+mega_autopins: mega_autopins: IZ (28,39) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (28,37) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: IZ (29,35) score=0
+mega_autopins: mega_autopins: IZ (29,33) score=0
+mega_autopins: mega_autopins: IZ (30,34) score=0
+mega_autopins: mega_autopins: IZ (30,35) score=0
+mega_autopins: mega_autopins: IZ (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(29,35)
+mega_autopins: mega_autopins: Placed IZ @29,35 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,38): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (30,34): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 2 @(30,35)
+mega_autopins: mega_autopins: Placed EC @30,35 sc=2
+mega_autopins: mega_autopins: Aqueduct reject (27,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (27,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,39) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (27,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (31,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (33,36) – on resource / invalid
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(29,37)
+mega_autopins: mega_autopins: Placed Harbor @29,37 sc=2
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 1 @(30,37)
+mega_autopins: mega_autopins: Placed Harbor @30,37 sc=1
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(31,36)
+mega_autopins: mega_autopins: Placed Harbor @31,36 sc=2
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,35) score=9 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (26,34) score=40 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,35) score=12 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,31) score=23 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,32) score=19 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,33) score=37 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,34) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: CitySite (26,30) score=14 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,31) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,32) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,33) score=29 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (27,30) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,31) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (28,32) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [100] @(26,34)
+mega_autopins: mega_autopins: Placed NextCity @26,34 score=40
+mega_autopins: mega_autopins: Reject site (26,33) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,33) 73< threshold
+mega_autopins: mega_autopins: Reject site (25,31) 58< threshold
+mega_autopins: mega_autopins: Reject site (26,31) 55< threshold
+mega_autopins: mega_autopins: Reject site (26,32) 48< threshold
+mega_autopins: mega_autopins: Reject site (27,32) 43< threshold
+mega_autopins: mega_autopins: Reject site (27,31) 38< threshold
+mega_autopins: mega_autopins: Reject site (26,30) 35< threshold
+mega_autopins: mega_autopins: Reject site (26,35) 30< threshold
+mega_autopins: mega_autopins: Reject site (25,35) 23< threshold
+mega_autopins: mega_autopins: Reject site (27,30) 20< threshold
+mega_autopins: mega_autopins: Reject site (28,32) 20< threshold
+mega_autopins: mega_autopins: NextCity placed 1 (best=40)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 4 pins
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (28,39) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (28,37) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Campus (29,35) score=0
+mega_autopins: mega_autopins: Campus (29,33) score=1
+mega_autopins: mega_autopins: Campus (30,35) score=0
+mega_autopins: mega_autopins: Campus (30,33) score=0
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (28,38) score=0
+mega_autopins: mega_autopins: Theater (28,39) score=0
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (28,37) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (29,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: Theater (29,35) score=1
+mega_autopins: mega_autopins: Theater (29,33) score=0
+mega_autopins: mega_autopins: Theater (30,34) score=0
+mega_autopins: mega_autopins: Theater (30,35) score=1
+mega_autopins: mega_autopins: Theater (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 (remove resource) @(29,36)
+mega_autopins: mega_autopins: Placed Theater @29,36 sc=2
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (28,38) score=0
+mega_autopins: mega_autopins: IZ (28,39) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (28,37) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: IZ (29,35) score=0
+mega_autopins: mega_autopins: IZ (29,33) score=0
+mega_autopins: mega_autopins: IZ (30,34) score=0
+mega_autopins: mega_autopins: IZ (30,35) score=0
+mega_autopins: mega_autopins: IZ (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(29,35)
+mega_autopins: mega_autopins: Placed IZ @29,35 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,38): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (30,34): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 2 @(30,35)
+mega_autopins: mega_autopins: Placed EC @30,35 sc=2
+mega_autopins: mega_autopins: Aqueduct reject (27,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (27,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,39) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (27,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (31,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (33,36) – on resource / invalid
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(29,37)
+mega_autopins: mega_autopins: Placed Harbor @29,37 sc=2
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 1 @(30,37)
+mega_autopins: mega_autopins: Placed Harbor @30,37 sc=1
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(31,36)
+mega_autopins: mega_autopins: Placed Harbor @31,36 sc=2
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,35) score=9 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (26,34) score=40 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,35) score=12 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,31) score=23 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,32) score=19 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,33) score=37 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,34) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: CitySite (26,30) score=14 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,31) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,32) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,33) score=29 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (27,30) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,31) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (28,32) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [100] @(26,34)
+mega_autopins: mega_autopins: Placed NextCity @26,34 score=40
+mega_autopins: mega_autopins: Reject site (26,33) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,33) 73< threshold
+mega_autopins: mega_autopins: Reject site (25,31) 58< threshold
+mega_autopins: mega_autopins: Reject site (26,31) 55< threshold
+mega_autopins: mega_autopins: Reject site (26,32) 48< threshold
+mega_autopins: mega_autopins: Reject site (27,32) 43< threshold
+mega_autopins: mega_autopins: Reject site (27,31) 38< threshold
+mega_autopins: mega_autopins: Reject site (26,30) 35< threshold
+mega_autopins: mega_autopins: Reject site (26,35) 30< threshold
+mega_autopins: mega_autopins: Reject site (25,35) 23< threshold
+mega_autopins: mega_autopins: Reject site (27,30) 20< threshold
+mega_autopins: mega_autopins: Reject site (28,32) 20< threshold
+mega_autopins: mega_autopins: NextCity placed 1 (best=40)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 5 pins
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (28,39) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (28,37) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Campus (29,35) score=0
+mega_autopins: mega_autopins: Campus (29,33) score=1
+mega_autopins: mega_autopins: Campus (30,35) score=0
+mega_autopins: mega_autopins: Campus (30,33) score=0
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (28,38) score=0
+mega_autopins: mega_autopins: Theater (28,39) score=0
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (28,37) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (29,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: Theater (29,35) score=1
+mega_autopins: mega_autopins: Theater (29,33) score=0
+mega_autopins: mega_autopins: Theater (30,34) score=0
+mega_autopins: mega_autopins: Theater (30,35) score=1
+mega_autopins: mega_autopins: Theater (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 (remove resource) @(29,36)
+mega_autopins: mega_autopins: Placed Theater @29,36 sc=2
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (28,38) score=0
+mega_autopins: mega_autopins: IZ (28,39) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (28,37) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: IZ (29,35) score=0
+mega_autopins: mega_autopins: IZ (29,33) score=0
+mega_autopins: mega_autopins: IZ (30,34) score=0
+mega_autopins: mega_autopins: IZ (30,35) score=0
+mega_autopins: mega_autopins: IZ (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(29,35)
+mega_autopins: mega_autopins: Placed IZ @29,35 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,38): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (30,34): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 2 @(30,35)
+mega_autopins: mega_autopins: Placed EC @30,35 sc=2
+mega_autopins: mega_autopins: Aqueduct reject (27,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (27,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,39) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (27,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (31,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (33,36) – on resource / invalid
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(29,37)
+mega_autopins: mega_autopins: Placed Harbor @29,37 sc=2
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 1 @(30,37)
+mega_autopins: mega_autopins: Placed Harbor @30,37 sc=1
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(31,36)
+mega_autopins: mega_autopins: Placed Harbor @31,36 sc=2
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,35) score=9 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (26,34) score=40 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,35) score=12 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,31) score=23 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,32) score=19 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,33) score=37 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,34) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: CitySite (26,30) score=14 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,31) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,32) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,33) score=29 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (27,30) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,31) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (28,32) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [100] @(26,34)
+mega_autopins: mega_autopins: Placed NextCity @26,34 score=40
+mega_autopins: mega_autopins: Reject site (26,33) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,33) 73< threshold
+mega_autopins: mega_autopins: Reject site (25,31) 58< threshold
+mega_autopins: mega_autopins: Reject site (26,31) 55< threshold
+mega_autopins: mega_autopins: Reject site (26,32) 48< threshold
+mega_autopins: mega_autopins: Reject site (27,32) 43< threshold
+mega_autopins: mega_autopins: Reject site (27,31) 38< threshold
+mega_autopins: mega_autopins: Reject site (26,30) 35< threshold
+mega_autopins: mega_autopins: Reject site (26,35) 30< threshold
+mega_autopins: mega_autopins: Reject site (25,35) 23< threshold
+mega_autopins: mega_autopins: Reject site (27,30) 20< threshold
+mega_autopins: mega_autopins: Reject site (28,32) 20< threshold
+mega_autopins: mega_autopins: NextCity placed 1 (best=40)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=79 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=79 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=79 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+PlotInfo: PlotInfo::OnCitySelectionChanged	0	65536	30	36	0	true	false
+TradeRouteChooser: No running route data was found, on load.
+PlotInfo: PlotInfo::OnCitySelectionChanged	0	65536	0	0	0	false	false
+TradeRouteChooser: No running route data was found, on load.
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+PlotInfo: PlotInfo::OnCitySelectionChanged	0	65536	30	36	0	true	false
+TradeRouteChooser: No running route data was found, on load.
+PlotInfo: PlotInfo::OnCitySelectionChanged	0	65536	0	0	0	false	false
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+NaturalDisasterPopup: PopupManager.LOCK   'NaturalDisasterPopup', id: 38428, priority:500
+InGame: Request to BulkHide( true, NaturalDisaster ), Show on 0 = 1
+InGame: Request to BulkHide( false, NaturalDisaster ), Show on 0 = 0
+NaturalDisasterPopup: PopupManager.Unlock 'NaturalDisasterPopup', id: 38428, priority:500
+TradeRouteChooser: No running route data was found, on load.
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=48 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 7 pins
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (28,39) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (28,37) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Campus (29,35) score=0
+mega_autopins: mega_autopins: Campus (29,33) score=1
+mega_autopins: mega_autopins: Campus (30,35) score=0
+mega_autopins: mega_autopins: Campus (30,33) score=0
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (28,38) score=0
+mega_autopins: mega_autopins: Theater (28,39) score=0
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (28,37) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (29,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: Theater (29,35) score=1
+mega_autopins: mega_autopins: Theater (29,33) score=0
+mega_autopins: mega_autopins: Theater (30,34) score=0
+mega_autopins: mega_autopins: Theater (30,35) score=1
+mega_autopins: mega_autopins: Theater (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 (remove resource) @(29,36)
+mega_autopins: mega_autopins: Placed Theater @29,36 sc=2
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (28,38) score=0
+mega_autopins: mega_autopins: IZ (28,39) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (28,37) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: IZ (29,35) score=0
+mega_autopins: mega_autopins: IZ (29,33) score=0
+mega_autopins: mega_autopins: IZ (30,34) score=0
+mega_autopins: mega_autopins: IZ (30,35) score=0
+mega_autopins: mega_autopins: IZ (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(29,35)
+mega_autopins: mega_autopins: Placed IZ @29,35 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,38): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (30,34): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 2 @(30,35)
+mega_autopins: mega_autopins: Placed EC @30,35 sc=2
+mega_autopins: mega_autopins: Aqueduct reject (27,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (27,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,39) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (27,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (31,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (33,36) – on resource / invalid
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(29,37)
+mega_autopins: mega_autopins: Placed Harbor @29,37 sc=2
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 1 @(30,37)
+mega_autopins: mega_autopins: Placed Harbor @30,37 sc=1
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(31,36)
+mega_autopins: mega_autopins: Placed Harbor @31,36 sc=2
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (24,37) score=37 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,36) score=44 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (25,37) score=29 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,35) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,36) score=41 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,37) score=38 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,38) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (26,34) score=40 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,35) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (25,31) score=23 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,32) score=19 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,33) score=37 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,34) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: CitySite (26,30) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (26,31) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,32) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,33) score=29 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (27,30) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (27,31) score=15 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (28,32) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: CitySite (29,31) score=9 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (30,32) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [100] @(25,36)
+mega_autopins: mega_autopins: Placed NextCity @25,36 score=44
+mega_autopins: mega_autopins: Reject site (26,36) – too close to another pick
+mega_autopins: mega_autopins: Reject site (26,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (26,37) – too close to another pick
+mega_autopins: mega_autopins: Reject site (24,37) – too close to another pick
+mega_autopins: mega_autopins: Reject site (26,33) – too close to another pick
+mega_autopins: mega_autopins: Reject site (27,34) 73< threshold
+mega_autopins: mega_autopins: Reject site (27,33) 66< threshold
+mega_autopins: mega_autopins: Reject site (25,37) 66< threshold
+mega_autopins: mega_autopins: Reject site (25,31) 52< threshold
+mega_autopins: mega_autopins: Reject site (27,38) 50< threshold
+mega_autopins: mega_autopins: Reject site (26,31) 50< threshold
+mega_autopins: mega_autopins: Reject site (26,32) 43< threshold
+mega_autopins: mega_autopins: Reject site (27,32) 39< threshold
+mega_autopins: mega_autopins: Reject site (30,32) 39< threshold
+mega_autopins: mega_autopins: Reject site (26,30) 39< threshold
+mega_autopins: mega_autopins: Reject site (27,31) 34< threshold
+mega_autopins: mega_autopins: Reject site (26,35) 34< threshold
+mega_autopins: mega_autopins: Reject site (25,35) 34< threshold
+mega_autopins: mega_autopins: Reject site (29,31) 20< threshold
+mega_autopins: mega_autopins: Reject site (27,30) 18< threshold
+mega_autopins: mega_autopins: Reject site (28,32) 18< threshold
+mega_autopins: mega_autopins: NextCity placed 1 (best=44)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=80 ACTION_ID=88
+PlotInfo: PlotInfo::OnCitySelectionChanged	0	131073	26	34	0	true	false
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 6 pins
+mega_autopins: mega_autopins: Event: InputActionTriggered id=88 ACTION_ID=88
+mega_autopins: mega_autopins: InputActionTriggered: Hotkey matched, toggling pins.
+mega_autopins: mega_autopins: Cleared 0 pins
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (28,39) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (28,37) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Campus (29,35) score=0
+mega_autopins: mega_autopins: Campus (29,33) score=1
+mega_autopins: mega_autopins: Campus (30,35) score=0
+mega_autopins: mega_autopins: Campus (30,33) score=0
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (28,38) score=0
+mega_autopins: mega_autopins: Theater (28,39) score=0
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (28,37) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (29,36): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (29,36) score=1
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: Theater (29,35) score=1
+mega_autopins: mega_autopins: Theater (29,33) score=0
+mega_autopins: mega_autopins: Theater (30,34) score=0
+mega_autopins: mega_autopins: Theater (30,35) score=1
+mega_autopins: mega_autopins: Theater (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 (remove resource) @(29,36)
+mega_autopins: mega_autopins: Placed Theater @29,36 sc=2
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (28,38) score=0
+mega_autopins: mega_autopins: IZ (28,39) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (28,37) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: IZ (29,35) score=0
+mega_autopins: mega_autopins: IZ (29,33) score=0
+mega_autopins: mega_autopins: IZ (30,34) score=0
+mega_autopins: mega_autopins: IZ (30,35) score=0
+mega_autopins: mega_autopins: IZ (30,33) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(29,35)
+mega_autopins: mega_autopins: Placed IZ @29,35 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,38): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (30,34): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 3 @(30,35)
+mega_autopins: mega_autopins: Placed EC @30,35 sc=3
+mega_autopins: mega_autopins: Aqueduct reject (27,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (27,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,39) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (27,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (28,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (28,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (29,34) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,39) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (29,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (30,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,38) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (30,33) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (31,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (31,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (32,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (33,36) – on resource / invalid
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(29,37)
+mega_autopins: mega_autopins: Placed Harbor @29,37 sc=2
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 1 @(30,37)
+mega_autopins: mega_autopins: Placed Harbor @30,37 sc=1
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Harbor 2 @(31,36)
+mega_autopins: mega_autopins: Placed Harbor @31,36 sc=2
+mega_autopins: mega_autopins: Campus (23,34) score=0
+mega_autopins: mega_autopins: Campus (23,35) score=0
+mega_autopins: mega_autopins: Campus (24,37) score=1
+mega_autopins: mega_autopins: Campus (23,33) score=0
+mega_autopins: mega_autopins: Campus (24,35) score=0
+mega_autopins: mega_autopins: Campus (25,36) score=0
+mega_autopins: mega_autopins: Campus (25,34) score=0
+mega_autopins: mega_autopins: Campus (26,36) score=0
+mega_autopins: mega_autopins: Campus (26,37) score=0
+mega_autopins: mega_autopins: Campus (25,32) score=0
+mega_autopins: mega_autopins: Campus (25,33) score=0
+mega_autopins: mega_autopins: Campus (26,35) score=0
+mega_autopins: mega_autopins: Campus (27,37) score=0
+mega_autopins: mega_autopins: Campus (25,31) score=1
+mega_autopins: mega_autopins: Campus (26,33) score=0
+mega_autopins: mega_autopins: Campus (27,34) score=0
+mega_autopins: mega_autopins: Campus (27,35) score=0
+mega_autopins: mega_autopins: Campus (28,36) score=0
+mega_autopins: mega_autopins: Campus (26,31) score=0
+mega_autopins: mega_autopins: Campus (27,32) score=0
+mega_autopins: mega_autopins: Campus (27,33) score=0
+mega_autopins: mega_autopins: Campus (28,34) score=0
+mega_autopins: mega_autopins: Campus (28,35) score=0
+mega_autopins: mega_autopins: Campus (27,31) score=0
+mega_autopins: mega_autopins: Campus (28,33) score=1
+mega_autopins: mega_autopins: Campus (29,34) score=0
+mega_autopins: mega_autopins: Theater (23,34) score=1
+mega_autopins: mega_autopins: Theater (23,35) score=0
+mega_autopins: mega_autopins: Theater (24,36) score=0
+mega_autopins: mega_autopins: Theater (24,37) score=0
+mega_autopins: mega_autopins: Theater (23,33) score=1
+mega_autopins: mega_autopins: Theater (24,34) score=0
+mega_autopins: mega_autopins: Theater (24,35) score=0
+mega_autopins: mega_autopins: Theater (25,36) score=0
+mega_autopins: mega_autopins: Theater (25,37) score=0
+mega_autopins: mega_autopins: Theater (24,32) score=0
+mega_autopins: mega_autopins: Theater (24,33) score=0
+mega_autopins: mega_autopins: Theater (25,34) score=1
+mega_autopins: mega_autopins: Theater (25,35) score=1
+mega_autopins: mega_autopins: Resource removal recommended at (25,35): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Theater (25,35) score=1
+mega_autopins: mega_autopins: Theater (26,36) score=0
+mega_autopins: mega_autopins: Theater (26,37) score=0
+mega_autopins: mega_autopins: Theater (24,31) score=0
+mega_autopins: mega_autopins: Theater (25,32) score=0
+mega_autopins: mega_autopins: Theater (25,33) score=1
+mega_autopins: mega_autopins: Theater (26,35) score=1
+mega_autopins: mega_autopins: Theater (27,36) score=0
+mega_autopins: mega_autopins: Theater (27,37) score=0
+mega_autopins: mega_autopins: Theater (25,31) score=0
+mega_autopins: mega_autopins: Theater (26,32) score=0
+mega_autopins: mega_autopins: Theater (26,33) score=1
+mega_autopins: mega_autopins: Theater (27,34) score=1
+mega_autopins: mega_autopins: Theater (27,35) score=0
+mega_autopins: mega_autopins: Theater (28,36) score=0
+mega_autopins: mega_autopins: Theater (26,31) score=0
+mega_autopins: mega_autopins: Theater (27,32) score=0
+mega_autopins: mega_autopins: Theater (27,33) score=0
+mega_autopins: mega_autopins: Theater (28,34) score=0
+mega_autopins: mega_autopins: Theater (28,35) score=0
+mega_autopins: mega_autopins: Theater (27,31) score=0
+mega_autopins: mega_autopins: Theater (28,32) score=0
+mega_autopins: mega_autopins: Theater (28,33) score=0
+mega_autopins: mega_autopins: Theater (29,34) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Theater 2 @(23,34)
+mega_autopins: mega_autopins: Placed Theater @23,34 sc=2
+mega_autopins: mega_autopins: IZ (23,35) score=0
+mega_autopins: mega_autopins: IZ (24,36) score=0
+mega_autopins: mega_autopins: IZ (24,37) score=0
+mega_autopins: mega_autopins: IZ (23,33) score=0
+mega_autopins: mega_autopins: IZ (24,34) score=0
+mega_autopins: mega_autopins: IZ (24,35) score=0
+mega_autopins: mega_autopins: IZ (25,36) score=0
+mega_autopins: mega_autopins: IZ (25,37) score=0
+mega_autopins: mega_autopins: IZ (24,32) score=0
+mega_autopins: mega_autopins: IZ (24,33) score=0
+mega_autopins: mega_autopins: IZ (25,34) score=0
+mega_autopins: mega_autopins: IZ (25,35) score=0
+mega_autopins: mega_autopins: IZ (26,36) score=0
+mega_autopins: mega_autopins: IZ (26,37) score=0
+mega_autopins: mega_autopins: IZ (24,31) score=0
+mega_autopins: mega_autopins: IZ (25,32) score=0
+mega_autopins: mega_autopins: IZ (25,33) score=0
+mega_autopins: mega_autopins: IZ (26,35) score=0
+mega_autopins: mega_autopins: IZ (27,36) score=0
+mega_autopins: mega_autopins: IZ (27,37) score=0
+mega_autopins: mega_autopins: IZ (25,31) score=0
+mega_autopins: mega_autopins: IZ (26,32) score=0
+mega_autopins: mega_autopins: IZ (26,33) score=0
+mega_autopins: mega_autopins: IZ (27,34) score=0
+mega_autopins: mega_autopins: IZ (27,35) score=0
+mega_autopins: mega_autopins: IZ (28,36) score=0
+mega_autopins: mega_autopins: IZ (26,31) score=0
+mega_autopins: mega_autopins: IZ (27,32) score=0
+mega_autopins: mega_autopins: IZ (27,33) score=0
+mega_autopins: mega_autopins: IZ (28,34) score=0
+mega_autopins: mega_autopins: IZ (28,35) score=0
+mega_autopins: mega_autopins: IZ (27,31) score=0
+mega_autopins: mega_autopins: IZ (28,32) score=0
+mega_autopins: mega_autopins: IZ (28,33) score=0
+mega_autopins: mega_autopins: IZ (29,34) score=0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] IZ 1 @(23,33)
+mega_autopins: mega_autopins: Placed IZ @23,33 sc=1
+mega_autopins: mega_autopins: Resource removal recommended at (24,36): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (24,34): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (25,37): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (24,32): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (24,33): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (25,35): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (24,31): district yield 1 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (27,36): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (26,32): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: Resource removal recommended at (28,32): district yield 2 > resource yield 0
+mega_autopins: mega_autopins: UpdatePin: [MEGA] EC 3 @(25,34)
+mega_autopins: mega_autopins: Placed EC @25,34 sc=3
+mega_autopins: mega_autopins: Aqueduct reject (23,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (24,36) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (24,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (24,34) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (24,35) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (25,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (25,37) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (24,32) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (24,33) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (25,35) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (26,36) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (26,37) – needs city+water
+mega_autopins: mega_autopins: Aqueduct reject (24,31) – on resource / invalid
+mega_autopins: mega_autopins: Aqueduct reject (25,32) – needs city+water
+mega_autopins: mega_autopins: UpdatePin: [MEGA] Aqueduct 1 @(25,33)
+mega_autopins: mega_autopins: Placed Aqueduct @25,33
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (21,29) score=14 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (22,28) score=14 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (22,29) score=19 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (27,38) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: CitySite (26,30) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (27,30) score=8 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (1 tiles)
+mega_autopins: mega_autopins: CitySite (29,31) score=9 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (30,32) score=17 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to player city (3 tiles)
+mega_autopins: mega_autopins: CitySite (16,34) score=33 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (16,35) score=10 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (16,33) score=34 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (17,34) score=36 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (17,35) score=16 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (17,33) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (18,34) score=22 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: CitySite (18,33) score=38 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (19,32) score=26 (+yield 0.0)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (1 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (2 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: Rejected city site – too close to city-state (3 tiles)
+mega_autopins: mega_autopins: CitySite (21,26) score=32 (+yield 0.0)
+mega_autopins: mega_autopins: CitySite (21,27) score=26 (+yield 0.0)
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [100] @(18,33)
+mega_autopins: mega_autopins: Placed NextCity @18,33 score=38
+mega_autopins: mega_autopins: Reject site (17,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (16,33) – too close to another pick
+mega_autopins: mega_autopins: Reject site (16,34) – too close to another pick
+mega_autopins: mega_autopins: Reject site (17,33) – too close to another pick
+mega_autopins: mega_autopins: UpdatePin: NEXT CITY [84] @(21,26)
+mega_autopins: mega_autopins: Placed NextCity @21,26 score=32
+mega_autopins: mega_autopins: Reject site (19,32) 68< threshold
+mega_autopins: mega_autopins: Reject site (21,27) 68< threshold
+mega_autopins: mega_autopins: Reject site (27,38) 58< threshold
+mega_autopins: mega_autopins: Reject site (18,34) 58< threshold
+mega_autopins: mega_autopins: Reject site (22,29) 50< threshold
+mega_autopins: mega_autopins: Reject site (30,32) 45< threshold
+mega_autopins: mega_autopins: Reject site (26,30) 45< threshold
+mega_autopins: mega_autopins: Reject site (17,35) 42< threshold
+mega_autopins: mega_autopins: Reject site (21,29) 37< threshold
+mega_autopins: mega_autopins: Reject site (22,28) 37< threshold
+mega_autopins: mega_autopins: Reject site (16,35) 26< threshold
+mega_autopins: mega_autopins: Reject site (29,31) 24< threshold
+mega_autopins: mega_autopins: Reject site (27,30) 21< threshold
+mega_autopins: mega_autopins: NextCity placed 2 (best=38)
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=10 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=8 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=9 ACTION_ID=88
+mega_autopins: mega_autopins: Event: InputActionTriggered id=11 ACTION_ID=88
