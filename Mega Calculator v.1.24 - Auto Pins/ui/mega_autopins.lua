@@ -61,6 +61,15 @@ end
 
 local function AdjacentPlots(x, y) return Map.GetAdjacentPlots(x, y) or {} end
 
+
+-- Ownership helper: allow our tiles or unowned, block enemy/CS land
+local function isOwnedByPlayerOrUnowned(city, p)
+  if not p or not city then return false end
+  local owner = p:GetOwner()
+  return owner == -1 or owner == city:GetOwner()
+end
+
+
 -- Resource-aware check: rejects bonus, luxury, and strategic tiles
 local function canHostDistrictBasic(p)
   if not p then return false end
@@ -557,12 +566,16 @@ end
 -- ===========================================================
 -- Helper: Check if plot is already used or has a district
 
-local function isPlotBlocked(p, used)
+
+-- Helper: Check if plot is already used, has a district, or is enemy-owned
+local function isPlotBlocked(p, used, city)
   if not p then return true end
   if used and used[p:GetIndex()] then return true end
   if p:GetDistrictType() ~= -1 then return true end
+  if city and not isOwnedByPlayerOrUnowned(city, p) then return true end
   return false
 end
+
 
 local function bestPlotAround(city, radius, scoreFunc, minWanted, used)
   local cx, cy = city:GetX(), city:GetY()
@@ -602,9 +615,10 @@ local function placeCampusHubSynergy(city, used)
     for dy = -3, 3 do
       local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
       if p and visible(p) and (not used[p:GetIndex()]) and canHostDistrictBasic(p)
-         and within3OfCity(city, p) then
+         and within3OfCity(city, p)
+         and isOwnedByPlayerOrUnowned(city, p) then
         local sc = scoreCampus(p)
-        if sc >= 2 then campList[#campList + 1] = { plot = p, score = sc } end
+        if sc >= 0 then campList[#campList + 1] = { plot = p, score = sc } end
       end
     end
   end
@@ -642,13 +656,13 @@ local function placeCampusHubSynergy(city, used)
     local idx = bestC.plot:GetIndex(); used[idx] = true
     ensurePinAt(bestC.plot:GetX(), bestC.plot:GetY(), ICONS.CAMPUS,
                 PIN_PREFIX.." Campus "..bestC.score)
-    dbg("Placed Campus @"..bestC.plot:GetX()..","..bestC.plot:GetY().." sc="..bestC.score)
+    dbg(string.format("Placed Campus @%d,%d sc=%d", bestC.plot:GetX(), bestC.plot:GetY(), bestC.score))
   end
   if bestH then
     local idx = bestH.plot:GetIndex(); used[idx] = true
     ensurePinAt(bestH.plot:GetX(), bestH.plot:GetY(), ICONS.HUB,
                 PIN_PREFIX.." Hub "..bestH.score)
-    dbg("Placed Hub @"..bestH.plot:GetX()..","..bestH.plot:GetY().." sc="..bestH.score)
+    dbg(string.format("Placed Hub @%d,%d sc=%d", bestH.plot:GetX(), bestH.plot:GetY(), bestH.score))
   end
 end
 
@@ -656,12 +670,36 @@ end
 local function placeForCity(city, used)
   placeCampusHubSynergy(city, used)
 
-  local tP, ts, tRemove = bestPlotAround(city, 3, scoreTheater, 0, used)
+  
+
+-- Harbor (only one per city; ownership safe)
+do
+  local harborPlaced = false
+  local cx, cy = city:GetX(), city:GetY()
+  for dx = -3, 3 do
+    for dy = -3, 3 do
+      local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
+      if p and visible(p) and (not used[p:GetIndex()]) and p:IsWater()
+         and isOwnedByPlayerOrUnowned(city, p)
+         and p:GetDistrictType() == -1 and harborIsLegalForCityTile(p, city) then
+        local sc = scoreHarbor(p, city)
+        if sc >= 0 then used[p:GetIndex()] = true
+          ensurePinAt(p:GetX(), p:GetY(), ICONS.HARBOR, PIN_PREFIX.." Harbor "..sc)
+          dbg(string.format("Placed Harbor @%d,%d sc=%d", p:GetX(), p:GetY(), sc))
+          harborPlaced = true; break
+        end
+      end
+    end
+    if harborPlaced then break end
+  end
+end
+
+local tP, ts, tRemove = bestPlotAround(city, 3, scoreTheater, 0, used)
   if tP then used[tP:GetIndex()] = true
     local name = PIN_PREFIX.." Theater "..ts
     if tRemove then name = name.." (remove resource)" end
     ensurePinAt(tP:GetX(), tP:GetY(), ICONS.THEATER, name)
-    dbg("Placed Theater @"..tP:GetX()..","..tP:GetY().." sc="..ts)
+    dbg(string.format("Placed Theater @%d,%d sc=%d", tP:GetX(), tP:GetY(), ts))
   end
 
   local izP, izs, izRemove = bestPlotAround(city, 3, scoreIZ, 0, used)
@@ -669,7 +707,7 @@ local function placeForCity(city, used)
     local name = PIN_PREFIX.." IZ "..izs
     if izRemove then name = name.." (remove resource)" end
     ensurePinAt(izP:GetX(), izP:GetY(), ICONS.IZ, name)
-    dbg("Placed IZ @"..izP:GetX()..","..izP:GetY().." sc="..izs)
+    dbg(string.format("Placed IZ @%d,%d sc=%d", izP:GetX(), izP:GetY(), izs))
   end
 
   local ecP, ecs, ecRemove = bestPlotAround(city, 3, scoreEC, 1, used)
@@ -677,7 +715,7 @@ local function placeForCity(city, used)
     local name = PIN_PREFIX.." EC "..ecs
     if ecRemove then name = name.." (remove resource)" end
     ensurePinAt(ecP:GetX(), ecP:GetY(), ICONS.EC, name)
-    dbg("Placed EC @"..ecP:GetX()..","..ecP:GetY().." sc="..ecs)
+    dbg(string.format("Placed EC @%d,%d sc=%d", ecP:GetX(), ecP:GetY(), ecs))
   end
 
   -- Aqueduct (verbose rejection)
@@ -688,9 +726,9 @@ local function placeForCity(city, used)
       local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
       if p and visible(p) and (not used[p:GetIndex()]) and within3OfCity(city, p) then
         if not canHostDistrictBasic(p) then
-          dbg("Aqueduct reject ("..p:GetX()..","..p:GetY()..") – on resource / invalid")
+          dbg(string.format("Aqueduct reject (%d,%d) – on resource / invalid", p:GetX(), p:GetY()))
         elseif not isAqueductLegal(p) then
-          dbg("Aqueduct reject ("..p:GetX()..","..p:GetY()..") – needs city+water")
+          dbg(string.format("Aqueduct reject (%d,%d) – needs city+water", p:GetX(), p:GetY()))
         else
           aqBest = p; break
         end
@@ -700,7 +738,7 @@ local function placeForCity(city, used)
   end
   if aqBest then used[aqBest:GetIndex()] = true
     ensurePinAt(aqBest:GetX(), aqBest:GetY(), ICONS.AQ, PIN_PREFIX.." Aqueduct 1")
-    dbg("Placed Aqueduct @"..aqBest:GetX()..","..aqBest:GetY())
+    dbg(string.format("Placed Aqueduct @%d,%d", aqBest:GetX(), aqBest:GetY()))
   end
 
   -- Harbor
@@ -712,7 +750,7 @@ local function placeForCity(city, used)
         local sc = scoreHarbor(p, city)
         if sc >= 0 then used[p:GetIndex()] = true
           ensurePinAt(p:GetX(), p:GetY(), ICONS.HARBOR, PIN_PREFIX.." Harbor "..sc)
-          dbg("Placed Harbor @"..p:GetX()..","..p:GetY().." sc="..sc)
+          dbg(string.format("Placed Harbor @%d,%d sc=%d", p:GetX(), p:GetY(), sc))
           break
         end
       end
