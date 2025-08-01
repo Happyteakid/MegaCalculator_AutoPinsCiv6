@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GameInfo>
+  <InputCategories>
+    <InsertOrIgnore CategoryId="MEGA_AUTOPINS" Name="LOC_MEGA_AUTOPINS_HOTKEY_CATEGORY" Visible="1" SortIndex="0"/>
+  </InputCategories>
+
+  <InputActions>
+    <InsertOrIgnore ActionId="Mega_ToggleAutoPins" Name="LOC_MEGA_AUTOPINS_TOGGLE" Description="LOC_MEGA_AUTOPINS_TOGGLE" CategoryId="MEGA_AUTOPINS" ContextId="World"/>
+  </InputActions>
+
+  <InputActionDefaultGestures>
+    <InsertOrIgnore ActionId="Mega_ToggleAutoPins" Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_SHIFT+LOC_OPTIONS_KEY_G"/>
+  </InputActionDefaultGestures>
+</GameInfo>
