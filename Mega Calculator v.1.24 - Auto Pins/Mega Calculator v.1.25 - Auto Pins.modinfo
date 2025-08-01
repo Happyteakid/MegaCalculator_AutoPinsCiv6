@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Mod id="4cb61ffa-7e88-41e7-914a-94f9f1bbd484" version="121">
+<Mod id="4cb61ffa-7e88-41e7-914a-94f9f1bbd484" version="125">
   <Properties>
-    <Name>Mega Calculator v.1.21 - Auto Pins</Name>
-    <Authors>You (idea & author), assistant (packaging)</Authors>
+    <Name>Mega Calculator v.1.25 - Auto Pins</Name>
+    <Authors>HappyTeakid</Authors>
     <Teaser>Auto-place Map Tacks for Campus/Hub/Theater/IZ/EC/Aqueduct + NEXT CITY proposals; Inca-aware; ≤3-tile district rule; hotkey Shift+G.</Teaser>
     <Description>Places Map Tacks for: City Center proposals (NEXT CITY [XX%]), Campus, Theater Square, Commercial Hub, Harbor, Industrial Zone, Entertainment Complex, Aqueduct. Science-first heuristics with Inca-aware Campus scoring (avoid prime Terrace Farm hills), EC restricted to ≤ 3 tiles from the city center, Harbor legality enforced. Next City scoring favors fresh water/resources/hills/reefs and respects spacing and a travel-distance cap. Press Shift+G to toggle.</Description>
     <AffectsSavedGames>0</AffectsSavedGames>

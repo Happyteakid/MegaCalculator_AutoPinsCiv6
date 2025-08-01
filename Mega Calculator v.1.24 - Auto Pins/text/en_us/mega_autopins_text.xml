@@ -3,7 +3,7 @@
   <LocalizedText>
     <Row Tag="LOC_MEGA_AUTOPINS_HOTKEY_CATEGORY" Language="en_US"><Text>Mega Calculator</Text></Row>
     <Row Tag="LOC_MEGA_AUTOPINS_TOGGLE" Language="en_US"><Text>Toggle Auto Pins (Shift+G)</Text></Row>
-    <Row Tag="LOC_MEGA_AUTOPINS_READY" Language="en_US"><Text>Mega Auto Pins v1.24 loaded. Press Shift+G.</Text></Row>
+    <Row Tag="LOC_MEGA_AUTOPINS_READY" Language="en_US"><Text>Mega Auto Pins v1.25 loaded. Press Shift+G.</Text></Row>
     <Row Tag="LOC_MEGA_AUTOPINS_ON" Language="en_US"><Text>Auto Pins: ON (placing Map Tacks)</Text></Row>
     <Row Tag="LOC_MEGA_AUTOPINS_OFF" Language="en_US"><Text>Auto Pins: OFF (cleared)</Text></Row>
   </LocalizedText>
