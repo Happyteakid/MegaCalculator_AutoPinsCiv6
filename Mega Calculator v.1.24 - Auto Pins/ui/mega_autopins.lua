@@ -1,12 +1,14 @@
 --  ===========================================================
---  Mega Auto Pins  v1.27        (2025-08-01)
+--  Mega Auto Pins  v1.28        (2025-08-02)
 --    * blocks districts on bonus / luxury / strategic resources
 --    * global 4-tile distance check (includes CS & AI cities)
 --    * verbose aqueduct rejection logging
---    * yield-aware city-site scoring  (hooks DMT if present)
+--    * yield-aware city-site scoring (hooks DMT if present)
+--    * skips suggesting a district if city already has it (unique replacements included)
+--    * city-site pins only on unowned land (no settling in existing borders)
+--    * Maya civilization: capital proximity yields accounted in city site scoring
 --  ===========================================================
-
-print("mega_autopins: v1.27 loading")
+print("mega_autopins: v1.28 loading")
 
 -- Optional link-up with Detailed Map Tacks yield engine.
 pcall(function() include("dmt_yieldcalculator") end)
@@ -19,7 +21,7 @@ local isOn         = false
 local localPlayer  = -1
 local PIN_PREFIX   = "[MEGA]"
 
--- ─────────────── Config ───────────────
+-- -------- Config --------
 local MIN_CITY_DISTANCE       = 4   -- tiles
 local NEXTCITY_MIN_PERCENT    = 80  -- ≥ % of best to list
 local NEXTCITY_MAX_PER_PLAYER = 6
@@ -36,7 +38,7 @@ local ICONS = {
   AQ      = "ICON_DISTRICT_AQUEDUCT",
 }
 
--- ───────── Civ detection (special heuristics) ─────────
+-- -------- Civ detection (special heuristics) --------
 local function isPlayerCiv(pid, civ)
   local pc = PlayerConfigurations[pid]
   return pc and pc:GetCivilizationTypeName() == civ
@@ -45,9 +47,26 @@ local function isPlayerInca(pid)
   local pc = PlayerConfigurations[pid]
   return pc and pc:GetCivilizationTypeName() == "CIVILIZATION_INCA"
 end
-local isInca,isBrazil,isJapan,isGermany,isGaul,isKorea = false,false,false,false,false,false
+local isInca,isBrazil,isJapan,isGermany,isGaul,isKorea,isMaya = false,false,false,false,false,false,false
 
--- ───────── General helpers ─────────
+-- District type indices for base and unique districts
+local idxCampus      = GameInfo.Districts["DISTRICT_CAMPUS"].Index
+local idxSeowon      = GameInfo.Districts["DISTRICT_SEOWON"] and GameInfo.Districts["DISTRICT_SEOWON"].Index or -1
+local idxObservatory = GameInfo.Districts["DISTRICT_OBSERVATORY"] and GameInfo.Districts["DISTRICT_OBSERVATORY"].Index or -1
+local idxHub         = GameInfo.Districts["DISTRICT_COMMERCIAL_HUB"].Index
+local idxHarbor      = GameInfo.Districts["DISTRICT_HARBOR"].Index
+local idxRND         = GameInfo.Districts["DISTRICT_ROYAL_NAVY_DOCKYARD"] and GameInfo.Districts["DISTRICT_ROYAL_NAVY_DOCKYARD"].Index or -1
+local idxTheater     = GameInfo.Districts["DISTRICT_THEATER_SQUARE"] and GameInfo.Districts["DISTRICT_THEATER_SQUARE"].Index or GameInfo.Districts["DISTRICT_THEATER"].Index
+local idxAcropolis   = GameInfo.Districts["DISTRICT_ACROPOLIS"] and GameInfo.Districts["DISTRICT_ACROPOLIS"].Index or -1
+local idxIZ          = GameInfo.Districts["DISTRICT_INDUSTRIAL_ZONE"].Index
+local idxHansa       = GameInfo.Districts["DISTRICT_HANSA"] and GameInfo.Districts["DISTRICT_HANSA"].Index or -1
+local idxOppidum     = GameInfo.Districts["DISTRICT_OPPIDUM"] and GameInfo.Districts["DISTRICT_OPPIDUM"].Index or -1
+local idxEC          = GameInfo.Districts["DISTRICT_ENTERTAINMENT_COMPLEX"].Index
+local idxCarnival    = GameInfo.Districts["DISTRICT_STREET_CARNIVAL"] and GameInfo.Districts["DISTRICT_STREET_CARNIVAL"].Index or -1
+local idxAqueduct    = GameInfo.Districts["DISTRICT_AQUEDUCT"].Index
+local idxBath        = GameInfo.Districts["DISTRICT_BATH"] and GameInfo.Districts["DISTRICT_BATH"].Index or -1
+
+-- -------- General helpers --------
 local function toast(tag)
   local txt = (Locale and Locale.Lookup and Locale.Lookup(tag)) or tag
   if UI and UI.AddWorldViewText then UI.AddWorldViewText(0, txt, -1, -1, 0) end
@@ -55,9 +74,6 @@ end
 
 local function visible(p)
   if not p then return false end
-  -- DEBUG: Always return true for pin placement
-  -- return true
-  -- If you want to keep the original logic, comment out the next lines:
   if localPlayer == -1 then return false end
   local pv = PlayersVisibility and PlayersVisibility[localPlayer]
   return (not pv) or pv:IsRevealed(p:GetIndex())
@@ -65,15 +81,12 @@ end
 
 local function AdjacentPlots(x, y) return Map.GetAdjacentPlots(x, y) or {} end
 
-
 -- Ownership helper: allow our tiles or unowned, block enemy/CS land
 local function isOwnedByPlayerOrUnowned(city, p)
   if not p or not city then return false end
   local owner = p:GetOwner()
-  -- Only allow unowned or owned by the city owner
   return owner == -1 or owner == city:GetOwner()
 end
-
 
 -- Resource-aware check: rejects bonus, luxury, and strategic tiles
 local function canHostDistrictBasic(p)
@@ -104,7 +117,7 @@ local function countAdj(x, y, fn)
   return c
 end
 
--- ───────── Global 4-tile distance check (includes CS) ─────────
+-- -------- Global 4-tile distance check (includes CS) --------
 local function minCityDistanceOK(plot)
   for _, pl in pairs(Players) do
     if pl and pl:GetCities() then
@@ -121,7 +134,7 @@ local function minCityDistanceOK(plot)
   return true
 end
 
--- ───────── Cheap yield proxy (uses DMT if available) ─────────
+-- -------- Cheap yield proxy (uses DMT if available) --------
 local function plotYieldScore(p)
   if DMT and DMT.GetRealizedPlotFeatures then
     local feats = DMT.GetRealizedPlotFeatures(localPlayer, p, nil)
@@ -140,7 +153,6 @@ local function getResourceYield(p)
   if not r or r == -1 then return 0 end
   local resInfo = GameInfo.Resources[r]
   if not resInfo then return 0 end
-  -- Example: food + production + gold (very rough, can be improved)
   local y = (resInfo.Food or 0) + (resInfo.Production or 0) + (resInfo.Gold or 0)
   return y
 end
@@ -172,13 +184,11 @@ local function canHostDistrictWithResourceAnalysis(p, scoreFunc)
     if class == "RESOURCECLASS_BONUS"
        or class == "RESOURCECLASS_LUXURY"
        or class == "RESOURCECLASS_STRATEGIC" then
-      -- Compare yields: if district is better, allow and recommend removal
       local districtScore = scoreFunc(p)
       local resourceYield = getResourceYield(p)
       if districtScore > resourceYield then
-        dbg(("Resource removal recommended at (%d,%d): district yield %d > resource yield %d")
-          :format(p:GetX(), p:GetY(), districtScore, resourceYield))
-        return true, true -- true = can place, true = recommend removal
+        dbg(("Resource removal recommended at (%d,%d): district yield %d > resource yield %d"):format(p:GetX(), p:GetY(), districtScore, resourceYield))
+        return true, true
       else
         return false, nil
       end
@@ -207,8 +217,7 @@ local function scoreCampus(p)
     local k = GameInfo.Features[f].FeatureType
     return k == "FEATURE_JUNGLE" or k == "FEATURE_RAINFOREST"
   end)
-  local distAdj = math.floor(
-      countAdj(x, y, function(q) return q:GetDistrictType() ~= -1 end) / 2)
+  local distAdj = math.floor(countAdj(x, y, function(q) return q:GetDistrictType() ~= -1 end) / 2)
 
   s = s + m + r + jr + distAdj
 
@@ -256,23 +265,22 @@ local function scoreTheater(p)
   dbg(("Theater (%d,%d) score=%d"):format(x, y, s))
   return s
 end
+
 -- ---------- Commercial Hub ----------
 local function scoreHub(p)
   local x, y = p:GetX(), p:GetY()
   local s = 0
   if p:IsRiver() then s = s + 2 end
-  s = s + countAdj(x, y, function(q) return q:GetDistrictType() ~= -1 end) -- generic district adj
-
+  s = s + countAdj(x, y, function(q) return q:GetDistrictType() ~= -1 end)
   s = s + countAdj(x, y, function(q)
     local d = q:GetDistrictType()
     return d ~= -1 and GameInfo.Districts[d].DistrictType == "DISTRICT_HARBOR"
   end)
-
   if isGermany then
     local clearLand = countAdj(x, y, function(q)
       return (not q:IsWater()) and (not q:IsMountain()) and (q:GetDistrictType() == -1)
     end)
-    s = s + clearLand               -- Hansa synergy
+    s = s + clearLand -- Hansa synergy
   end
   if isJapan then
     s = s + countAdj(x, y, function(q) return q:GetDistrictType() ~= -1 end)
@@ -324,16 +332,13 @@ local function scoreIZ(p)
         ["IMPROVEMENT_MINE"]   = true,
         ["IMPROVEMENT_QUARRY"] = true,
       })
-
   s = s + 2 * countAdj(x, y, function(q)
           local d = q:GetDistrictType()
           if d == -1 then return false end
           local dt = GameInfo.Districts[d].DistrictType
           return dt == "DISTRICT_AQUEDUCT" or dt == "DISTRICT_DAM"
         end)
-
   if isGermany then
-    -- Hansa: CH adj twice + resource adj once
     s = s + 2 * countAdj(x, y, function(q)
             local d = q:GetDistrictType()
             return d ~= -1 and GameInfo.Districts[d].DistrictType == "DISTRICT_COMMERCIAL_HUB"
@@ -397,6 +402,7 @@ local function scoreCitySite(plot)
   if not plot or not visible(plot) then return -999 end
   if plot:IsWater() or plot:IsMountain() or plot:IsImpassable() then return -999 end
   if plot:GetDistrictType() ~= -1 or plot:GetWonderType() ~= -1 then return -999 end
+  if plot:GetOwner() ~= -1 then return -999 end
   if not minCityDistanceOK(plot) then return -999 end
   if nearestOwnedCityDistance(plot) > MAX_SETTLER_DISTANCE then return -999 end
 
@@ -449,14 +455,28 @@ local function scoreCitySite(plot)
   local yld = plotYieldScore(plot)
   s = s + yld
 
+  -- Maya capital proximity
+  if isMaya then
+    local capCity = Players[localPlayer]:GetCities():GetCapitalCity()
+    if capCity then
+      local capDist = Map.GetPlotDistance(capCity:GetX(), capCity:GetY(), plot:GetX(), plot:GetY())
+      if capDist <= 6 then
+        s = s + 10
+        dbg(("CitySite (%d,%d) Maya bonus: within 6 of capital (distance %d)"):format(plot:GetX(), plot:GetY(), capDist))
+      elseif capDist > 6 then
+        s = s - 15
+        dbg(("CitySite (%d,%d) Maya penalty: %d tiles from capital"):format(plot:GetX(), plot:GetY(), capDist))
+      end
+    end
+  end
+
   -- Industry adjacency bonus
   if isNearIndustry(plot) then
-    s = s + 8 -- long-term bonus for being near an IZ
+    s = s + 8
     dbg(("CitySite (%d,%d) gets Industry adjacency bonus"):format(plot:GetX(), plot:GetY()))
   end
 
   dbg(("CitySite (%d,%d) score=%d (+yield %.1f)"):format(plot:GetX(), plot:GetY(), s, yld))
-
   return s
 end
 
@@ -492,7 +512,6 @@ end
 --  Pin helpers
 -- ===========================================================
 local function cfg()
-  -- DEBUG: Print localPlayer for diagnostics
   dbg("cfg() called, localPlayer="..tostring(localPlayer))
   return PlayerConfigurations[localPlayer]
 end
@@ -573,10 +592,6 @@ end
 -- ===========================================================
 --  Placement helpers & city-specific logic
 -- ===========================================================
--- Helper: Check if plot is already used or has a district
-
-
--- Helper: Check if plot is already used, has a district, or is enemy-owned
 local function isPlotBlocked(p, used, city)
   if not p then return true end
   if used and used[p:GetIndex()] then return true end
@@ -584,7 +599,6 @@ local function isPlotBlocked(p, used, city)
   if city and not isOwnedByPlayerOrUnowned(city, p) then return true end
   return false
 end
-
 
 local function bestPlotAround(city, radius, scoreFunc, minWanted, used)
   local cx, cy = city:GetX(), city:GetY()
@@ -601,7 +615,6 @@ local function bestPlotAround(city, radius, scoreFunc, minWanted, used)
         local canPlace, removal = canHostDistrictWithResourceAnalysis(p, scoreFunc)
         if canPlace then
           local sc = scoreFunc(p)
-          -- Add symbiosis bonus: +1 for each adjacent district (not itself)
           local adjDistricts = countAdj(p:GetX(), p:GetY(), function(q)
             return q:GetDistrictType() ~= -1
           end)
@@ -616,144 +629,126 @@ local function bestPlotAround(city, radius, scoreFunc, minWanted, used)
   return bestP, best, recommendRemoval
 end
 
--- ---------- Campus ↔ Hub synergy ----------
-local function placeCampusHubSynergy(city, used)
-  local cx, cy = city:GetX(), city:GetY()
-  local campList = {}
-  for dx = -3, 3 do
-    for dy = -3, 3 do
-      local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
-      if p and visible(p) and (not used[p:GetIndex()]) and canHostDistrictBasic(p)
-         and within3OfCity(city, p)
-         and isOwnedByPlayerOrUnowned(city, p) then
-        local sc = scoreCampus(p)
-        if sc >= 0 then campList[#campList + 1] = { plot = p, score = sc } end
-      end
-    end
-  end
-  table.sort(campList, function(a, b) return a.score > b.score end)
-  if #campList == 0 then return end
-  if #campList > 6 then
-    campList = { campList[1], campList[2], campList[3],
-                 campList[4], campList[5], campList[6] }
-  end
-
-  local bestC, bestH, bestTotal = nil, nil, -999
-  for _, c in ipairs(campList) do
-    for dx = -3, 3 do
-      for dy = -3, 3 do
-        local h = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
-        if h and h ~= c.plot and visible(h)
-           and (not used[h:GetIndex()]) and canHostDistrictBasic(h)
-           and within3OfCity(city, h)
-           and isOwnedByPlayerOrUnowned(city, h) then
-          local hs = scoreHub(h)
-          local isAdj = false
-          for _, q in ipairs(AdjacentPlots(h:GetX(), h:GetY())) do
-            if q == c.plot then isAdj = true; break end
-          end
-          if isAdj then hs = hs + 1 end
-          local tot = c.score + hs
-          if tot > bestTotal then
-            bestTotal = tot; bestC = c; bestH = { plot = h, score = hs }
-          end
-        end
-      end
-    end
-  end
-
-  if bestC then
-    local idx = bestC.plot:GetIndex(); used[idx] = true
-    ensurePinAt(bestC.plot:GetX(), bestC.plot:GetY(), ICONS.CAMPUS,
-                PIN_PREFIX.." Campus "..bestC.score)
-    dbg(string.format("Placed Campus @%d,%d sc=%d", bestC.plot:GetX(), bestC.plot:GetY(), bestC.score))
-  end
-  if bestH then
-    local idx = bestH.plot:GetIndex(); used[idx] = true
-    ensurePinAt(bestH.plot:GetX(), bestH.plot:GetY(), ICONS.HUB,
-                PIN_PREFIX.." Hub "..bestH.score)
-    dbg(string.format("Placed Hub @%d,%d sc=%d", bestH.plot:GetX(), bestH.plot:GetY(), bestH.score))
-  end
-end
-
 -- ---------- City-specific routine ----------
 local function placeForCity(city, used)
-  placeCampusHubSynergy(city, used)
-
-  -- Harbor (only one per city; ownership safe)
-  local harborPlaced = false
+  local cityDistricts = city:GetDistricts()
+  local hasCampus    = cityDistricts:HasDistrict(idxCampus) or (idxSeowon ~= -1 and cityDistricts:HasDistrict(idxSeowon)) or (idxObservatory ~= -1 and cityDistricts:HasDistrict(idxObservatory))
+  local hasHub       = cityDistricts:HasDistrict(idxHub)
+  local hasHarbor    = cityDistricts:HasDistrict(idxHarbor) or (idxRND ~= -1 and cityDistricts:HasDistrict(idxRND))
+  local hasTheater   = cityDistricts:HasDistrict(idxTheater) or (idxAcropolis ~= -1 and cityDistricts:HasDistrict(idxAcropolis))
+  local hasIZ        = cityDistricts:HasDistrict(idxIZ) or (idxHansa ~= -1 and cityDistricts:HasDistrict(idxHansa)) or (idxOppidum ~= -1 and cityDistricts:HasDistrict(idxOppidum))
+  local hasEC        = cityDistricts:HasDistrict(idxEC) or (idxCarnival ~= -1 and cityDistricts:HasDistrict(idxCarnival))
+  local hasAqueduct  = cityDistricts:HasDistrict(idxAqueduct) or (idxBath ~= -1 and cityDistricts:HasDistrict(idxBath))
   local cx, cy = city:GetX(), city:GetY()
-  for dx = -3, 3 do
-    for dy = -3, 3 do
-      local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
-      if p and visible(p) and (not used[p:GetIndex()]) and p:IsWater()
-         and isOwnedByPlayerOrUnowned(city, p)
-         and p:GetDistrictType() == -1 and harborIsLegalForCityTile(p, city) then
-        local sc = scoreHarbor(p, city)
-        if sc >= 0 then
-          used[p:GetIndex()] = true
-          ensurePinAt(p:GetX(), p:GetY(), ICONS.HARBOR, PIN_PREFIX.." Harbor "..sc)
-          dbg(string.format("Placed Harbor @%d,%d sc=%d", p:GetX(), p:GetY(), sc))
-          harborPlaced = true
-          break
+
+  -- Campus & Hub placement
+  if (not hasCampus) and (not hasHub) then
+    placeCampusHubSynergy(city, used)
+  elseif (not hasCampus) and hasHub then
+    -- City has Hub but no Campus
+    local cP, cs, cRemove = bestPlotAround(city, 3, scoreCampus, 0, used)
+    if cP then
+      used[cP:GetIndex()] = true
+      local name = PIN_PREFIX.." Campus "..cs
+      if cRemove then name = name.." (remove resource)" end
+      ensurePinAt(cP:GetX(), cP:GetY(), ICONS.CAMPUS, name)
+      dbg(string.format("Placed Campus @%d,%d sc=%d", cP:GetX(), cP:GetY(), cs))
+    end
+  elseif hasCampus and (not hasHub) then
+    -- City has Campus but no Hub
+    local hP, hs, hRemove = bestPlotAround(city, 3, scoreHub, 0, used)
+    if hP then
+      used[hP:GetIndex()] = true
+      local name = PIN_PREFIX.." Hub "..hs
+      if hRemove then name = name.." (remove resource)" end
+      ensurePinAt(hP:GetX(), hP:GetY(), ICONS.HUB, name)
+      dbg(string.format("Placed Hub @%d,%d sc=%d", hP:GetX(), hP:GetY(), hs))
+    end
+  end
+
+  -- Harbor (only one per city)
+  if not hasHarbor then
+    local harborPlaced = false
+    for dx = -3, 3 do
+      for dy = -3, 3 do
+        local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
+        if p and visible(p) and (not used[p:GetIndex()]) and p:IsWater()
+           and isOwnedByPlayerOrUnowned(city, p)
+           and p:GetDistrictType() == -1 and harborIsLegalForCityTile(p, city) then
+          local sc = scoreHarbor(p, city)
+          if sc >= 0 then
+            used[p:GetIndex()] = true
+            ensurePinAt(p:GetX(), p:GetY(), ICONS.HARBOR, PIN_PREFIX.." Harbor "..sc)
+            dbg(string.format("Placed Harbor @%d,%d sc=%d", p:GetX(), p:GetY(), sc))
+            harborPlaced = true
+            break
+          end
         end
       end
+      if harborPlaced then break end
     end
-    if harborPlaced then break end
   end
 
-  -- Theater
-  local tP, ts, tRemove = bestPlotAround(city, 3, scoreTheater, 0, used)
-  if tP then
-    used[tP:GetIndex()] = true
-    local name = PIN_PREFIX.." Theater "..ts
-    if tRemove then name = name.." (remove resource)" end
-    ensurePinAt(tP:GetX(), tP:GetY(), ICONS.THEATER, name)
-    dbg(string.format("Placed Theater @%d,%d sc=%d", tP:GetX(), tP:GetY(), ts))
+  -- Theater Square
+  if not hasTheater then
+    local tP, ts, tRemove = bestPlotAround(city, 3, scoreTheater, 0, used)
+    if tP then
+      used[tP:GetIndex()] = true
+      local name = PIN_PREFIX.." Theater "..ts
+      if tRemove then name = name.." (remove resource)" end
+      ensurePinAt(tP:GetX(), tP:GetY(), ICONS.THEATER, name)
+      dbg(string.format("Placed Theater @%d,%d sc=%d", tP:GetX(), tP:GetY(), ts))
+    end
   end
 
-  -- IZ
-  local izP, izs, izRemove = bestPlotAround(city, 3, scoreIZ, 0, used)
-  if izP then
-    used[izP:GetIndex()] = true
-    local name = PIN_PREFIX.." IZ "..izs
-    if izRemove then name = name.." (remove resource)" end
-    ensurePinAt(izP:GetX(), izP:GetY(), ICONS.IZ, name)
-    dbg(string.format("Placed IZ @%d,%d sc=%d", izP:GetX(), izP:GetY(), izs))
+  -- Industrial Zone
+  if not hasIZ then
+    local izP, izs, izRemove = bestPlotAround(city, 3, scoreIZ, 0, used)
+    if izP then
+      used[izP:GetIndex()] = true
+      local name = PIN_PREFIX.." IZ "..izs
+      if izRemove then name = name.." (remove resource)" end
+      ensurePinAt(izP:GetX(), izP:GetY(), ICONS.IZ, name)
+      dbg(string.format("Placed IZ @%d,%d sc=%d", izP:GetX(), izP:GetY(), izs))
+    end
   end
 
-  -- EC
-  local ecP, ecs, ecRemove = bestPlotAround(city, 3, scoreEC, 1, used)
-  if ecP then
-    used[ecP:GetIndex()] = true
-    local name = PIN_PREFIX.." EC "..ecs
-    if ecRemove then name = name.." (remove resource)" end
-    ensurePinAt(ecP:GetX(), ecP:GetY(), ICONS.EC, name)
-    dbg(string.format("Placed EC @%d,%d sc=%d", ecP:GetX(), ecP:GetY(), ecs))
+  -- Entertainment Complex
+  if not hasEC then
+    local ecP, ecs, ecRemove = bestPlotAround(city, 3, scoreEC, 1, used)
+    if ecP then
+      used[ecP:GetIndex()] = true
+      local name = PIN_PREFIX.." EC "..ecs
+      if ecRemove then name = name.." (remove resource)" end
+      ensurePinAt(ecP:GetX(), ecP:GetY(), ICONS.EC, name)
+      dbg(string.format("Placed EC @%d,%d sc=%d", ecP:GetX(), ecP:GetY(), ecs))
+    end
   end
 
-  -- Aqueduct (verbose rejection)
-  local aqBest = nil
-  for dx = -3, 3 do
-    for dy = -3, 3 do
-      local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
-      if p and visible(p) and (not used[p:GetIndex()]) and within3OfCity(city, p)
-         and isOwnedByPlayerOrUnowned(city, p) then
-        if not canHostDistrictBasic(p) then
-          dbg(string.format("Aqueduct reject (%d,%d) – on resource / invalid", p:GetX(), p:GetY()))
-        elseif not isAqueductLegal(p) then
-          dbg(string.format("Aqueduct reject (%d,%d) – needs city+water", p:GetX(), p:GetY()))
-        else
-          aqBest = p; break
+  -- Aqueduct
+  if not hasAqueduct then
+    local aqBest = nil
+    for dx = -3, 3 do
+      for dy = -3, 3 do
+        local p = Map.GetPlotXYWithRangeCheck(cx, cy, dx, dy, 3)
+        if p and visible(p) and (not used[p:GetIndex()]) and within3OfCity(city, p)
+           and isOwnedByPlayerOrUnowned(city, p) then
+          if not canHostDistrictBasic(p) then
+            dbg(string.format("Aqueduct reject (%d,%d) – on resource / invalid", p:GetX(), p:GetY()))
+          elseif not isAqueductLegal(p) then
+            dbg(string.format("Aqueduct reject (%d,%d) – needs city+water", p:GetX(), p:GetY()))
+          else
+            aqBest = p; break
+          end
         end
       end
+      if aqBest then break end
     end
-    if aqBest then break end
-  end
-  if aqBest then
-    used[aqBest:GetIndex()] = true
-    ensurePinAt(aqBest:GetX(), aqBest:GetY(), ICONS.AQ, PIN_PREFIX.." Aqueduct 1")
-    dbg(string.format("Placed Aqueduct @%d,%d", aqBest:GetX(), aqBest:GetY()))
+    if aqBest then
+      used[aqBest:GetIndex()] = true
+      ensurePinAt(aqBest:GetX(), aqBest:GetY(), ICONS.AQ, PIN_PREFIX.." Aqueduct 1")
+      dbg(string.format("Placed Aqueduct @%d,%d", aqBest:GetX(), aqBest:GetY()))
+    end
   end
 end
 
@@ -771,8 +766,7 @@ local function placeNextCityPins()
   local placed, chosen = 0, {}
   local function farFromChosen(p)
     for _, ch in ipairs(chosen) do
-      if Map.GetPlotDistance(p:GetX(), p:GetY(),
-                             ch.plot:GetX(), ch.plot:GetY()) < MIN_CITY_DISTANCE then
+      if Map.GetPlotDistance(p:GetX(), p:GetY(), ch.plot:GetX(), ch.plot:GetY()) < MIN_CITY_DISTANCE then
         return false
       end
     end
@@ -782,16 +776,13 @@ local function placeNextCityPins()
   for _, item in ipairs(cands) do
     local pct = math.floor(100.0 * item.score / best + 0.5)
     if pct < NEXTCITY_MIN_PERCENT then
-      dbg(("Reject site (%d,%d) %.0f%% < threshold"):format(
-            item.plot:GetX(), item.plot:GetY(), pct))
+      dbg(("Reject site (%d,%d) %.0f%% < threshold"):format(item.plot:GetX(), item.plot:GetY(), pct))
     elseif not farFromChosen(item.plot) then
-      dbg(("Reject site (%d,%d) – too close to another pick"):format(
-            item.plot:GetX(), item.plot:GetY()))
+      dbg(("Reject site (%d,%d) – too close to another pick"):format(item.plot:GetX(), item.plot:GetY()))
     else
       local name = ("NEXT CITY [%d%%]"):format(pct)
       ensurePinAt(item.plot:GetX(), item.plot:GetY(), ICONS.CITY, name)
-      dbg(("Placed NextCity @%d,%d score=%d"):format(
-            item.plot:GetX(), item.plot:GetY(), item.score))
+      dbg(("Placed NextCity @%d,%d score=%d"):format(item.plot:GetX(), item.plot:GetY(), item.score))
       chosen[#chosen+1] = item
       placed = placed + 1
       if placed >= NEXTCITY_MAX_PER_PLAYER then break end
@@ -802,8 +793,7 @@ local function placeNextCityPins()
   if placed == 0 then
     local t = cands[1]
     local pct = math.floor(100.0 * t.score / best + 0.5)
-    ensurePinAt(t.plot:GetX(), t.plot:GetY(), ICONS.CITY,
-                ("NEXT CITY [%d%%]"):format(pct))
+    ensurePinAt(t.plot:GetX(), t.plot:GetY(), ICONS.CITY, ("NEXT CITY [%d%%]"):format(pct))
     dbg("Fallback: placed single best city site")
   end
   dbg(("NextCity placed %d (best=%d)"):format(placed, best))
@@ -836,8 +826,6 @@ end
 -- ===========================================================
 --  Input & init
 -- ===========================================================
-
--- Improved input/event registration and diagnostics
 local function OnInputActionTriggered(id)
   dbg("Event: InputActionTriggered id="..tostring(id).." ACTION_ID="..tostring(ACTION_ID))
   if id == ACTION_ID then
@@ -870,6 +858,7 @@ local function Initialize()
   isGermany = isPlayerCiv(localPlayer, "CIVILIZATION_GERMANY")
   isGaul    = isPlayerCiv(localPlayer, "CIVILIZATION_GAUL")
   isKorea   = isPlayerCiv(localPlayer, "CIVILIZATION_KOREA")
+  isMaya    = isPlayerCiv(localPlayer, "CIVILIZATION_MAYA")
 
   if ContextPtr and ContextPtr.SetInputHandler then
     dbg("Registering input handler via ContextPtr")
@@ -894,6 +883,4 @@ local function Initialize()
 end
 
 Events.LoadGameViewStateDone.Add(Initialize)
-
-print("mega_autopins: v1.27 ready")
-  
+print("mega_autopins: v1.28 ready")
